@@ -28,21 +28,54 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Hello World</title>
+        <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+        <title>APPMedia</title>
     </head>
     <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+
+            <div id="telaMenu" class=" page">
+                <!--<div class="navbar">
+                    <span> Menu </span>
+                </div>-->
+
+                <div class="painelMenu">
+                    <div class="logoMenu">
+                        <img src="img/logoPlay.png">
+
+                    </div>
+
+                    <button class="btn play"> 
+                        <i class="material-icons" style="font-size: 60px;"> play_arrow </i>
+                        Reproduzir
+                    </button>
+                    <button class="btn">
+                        <i class="material-icons" style="font-size: 60px;"> stop </i>
+                        Gravar Áudio
+                    </button>
+                </div>
+
             </div>
-            <button id = "playAudio">PLAY</button>
+
+
+
+            <div id="telaPlayMusica" class= "hidden page">
+                <h2> Player de Musica <h2>
+            </div>
+
+
+            <div id="telaGravarAudio" class="hidden page">
+                <h2> Gravar Audio </h2>
+            </div>
+
+            <!--<button id = "playAudio">PLAY</button>
             <button id = "pauseAudio">PAUSE</button>
             <button id = "stopAudio">STOP</button>
             <button id = "volumeUp">VOLUME UP</button>
@@ -51,7 +84,7 @@
             <button id = "adiantarAudio">ADIANTAR -></button>
             <button id = "atrasarAudio"> <- ATRASAR </button>
             <button id = "duracao">DURAÇÃO DO AUDIO</button>   
-            <!-- <button id = "gravarAudio">INICIAR</button>
+            <button id = "gravarAudio">INICIAR</button>
             <button id = "pararGravar">PARAR GRAVAÇÃO</button> -->
 
         </div>

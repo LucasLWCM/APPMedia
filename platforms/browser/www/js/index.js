@@ -181,3 +181,6 @@ function duracao(){
   console.log(min+":"+seg);
   console.log(duracao);
 }
+function teste(){
+
+}
