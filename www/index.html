@@ -41,7 +41,7 @@
     </head>
     <body>
 
-            <div id="telaMenu" class=" page">
+            <div id="telaMenu" class="page page-active">
                 <!--<div class="navbar">
                     <span> Menu </span>
                 </div>-->
@@ -52,11 +52,11 @@
 
                     </div>
 
-                    <button class="btn play"> 
+                    <button class="btn play targetPage" dt-page='#telaPlayMusica'> 
                         <i class="material-icons" style="font-size: 60px;"> play_arrow </i>
                         Reproduzir
                     </button>
-                    <button class="btn">
+                    <button class="btn targetPage" dt-page='#telaGravarAudio'>
                         <i class="material-icons" style="font-size: 60px;"> stop </i>
                         Gravar Áudio
                     </button>
@@ -88,7 +88,11 @@
             <button id = "pararGravar">PARAR GRAVAÇÃO</button> -->
 
         </div>
+
+        <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
+        <script src="js/function.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        
     </body>
 </html>

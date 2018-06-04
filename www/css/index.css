@@ -2,15 +2,15 @@
     margin: 0;
     font-family: 'Kanit', sans-serif;
 }
-.hidden{
-    display: none;
-
-}
 .page{
     position: absolute;
     height: 100%;
     width: 100%;
     overflow: auto;
+    display: none;
+}
+.page-active{
+    display: block;
 }
 #telaMenu{
 
