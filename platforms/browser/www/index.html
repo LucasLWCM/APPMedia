@@ -28,21 +28,96 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Hello World</title>
+        <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+        <title>APPMedia</title>
     </head>
     <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+
+            <div id="telaMenu" class="page ">
+
+                <div class="painelMenu">
+
+                    <div class="logoMenu">
+
+                        <img src="img/logoPlay.png">
+
+                    </div>
+
+                    <button class="btn play targetPage" dt-page='#telaPlayMusica'> 
+                        <i class="material-icons" style="font-size: 60px;"> play_arrow </i>
+                        Reproduzir
+                    </button>
+
+                    <button class="btn targetPage" dt-page='#telaGravarAudio'>
+                        <i class="material-icons" style="font-size: 60px;"> stop </i>
+                        Gravar Áudio
+                    </button>
+
+                </div>
+                
             </div>
-            <button id = "playAudio">PLAY</button>
+
+
+
+            <div id="telaPlayMusica" class= "page page-active">
+                   
+               <div class="top">      
+                    <div class="painel">
+                        <div class="logoPlay">
+                            <img src="img/logoPlay.png">
+                        </div>
+                    </div>
+
+                    <button class="btn-direito btn-menu targetPage" dt-page='#telaMenu'>
+                        <i class="material-icons" style="font-size: 54px"> view_headline </i>
+                    </button>
+
+                    <button id = "volumeUp" class="btn-direito btn-mais">
+                        <i class="material-icons" style="font-size: 54px"> local_hospital</i>
+                    </button>
+
+                    <button id = "volumeDown" class="btn-direito">
+                        <i class="material-icons" style="font-size: 54px"> indeterminate_check_box</i>
+                    </button>
+                </div>
+
+                <div class="meio">
+                    <div class="container">
+                        <button id = "atrasarAudio" class="btn-direito btn-atras">
+                            <i class="material-icons" style="font-size: 54px">fast_rewind</i>
+                        </button>
+                    </div>
+
+                    <div class="container">
+                        <button id = "playAudio" class="btn-direito btn-play">
+                            <i class="material-icons" style="font-size: 54px">play_arrow</i>    
+                        </button>
+                    </div>
+
+                    <div class="container">
+                        <button id = "adiantarAudio" class="btn-direito btn-passar">
+                            <i class="material-icons" style="font-size: 54px">fast_forward</i>    
+                        </button>
+                    </div>                    
+
+                </div>
+
+            </div>
+
+
+            <div id="telaGravarAudio" class=" page">
+                <h2> Gravar Audio </h2>
+            </div>
+
+            <!--<button id = "playAudio">PLAY</button>
             <button id = "pauseAudio">PAUSE</button>
             <button id = "stopAudio">STOP</button>
             <button id = "volumeUp">VOLUME UP</button>
@@ -51,11 +126,15 @@
             <button id = "adiantarAudio">ADIANTAR -></button>
             <button id = "atrasarAudio"> <- ATRASAR </button>
             <button id = "duracao">DURAÇÃO DO AUDIO</button>   
-            <!-- <button id = "gravarAudio">INICIAR</button>
+            <button id = "gravarAudio">INICIAR</button>
             <button id = "pararGravar">PARAR GRAVAÇÃO</button> -->
 
         </div>
+
+        <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
+        <script src="js/function.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        
     </body>
 </html>

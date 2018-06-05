@@ -27,32 +27,20 @@ var app = {
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
-        this.receivedEvent('deviceready');
         document.getElementById("playAudio").addEventListener("click", playAudio);
-        document.getElementById("pauseAudio").addEventListener("click", pauseAudio);
-        document.getElementById("stopAudio").addEventListener("click", stopAudio);
+        //document.getElementById("pauseAudio").addEventListener("click", pauseAudio);
+        //document.getElementById("stopAudio").addEventListener("click", stopAudio);
         document.getElementById("volumeUp").addEventListener("click", volumeUp);
         document.getElementById("volumeDown").addEventListener("click", volumeDown);
-        document.getElementById("posicaoAtual").addEventListener("click", posicaoAtual);
+       // document.getElementById("posicaoAtual").addEventListener("click", posicaoAtual);
         document.getElementById("adiantarAudio").addEventListener("click", adiantarAudio);
         document.getElementById("atrasarAudio").addEventListener("click", atrasarAudio);
-        document.getElementById("duracao").addEventListener("click", duracao);
+        //document.getElementById("duracao").addEventListener("click", duracao);
         
         //document.getElementById("gravarAudio").addEventListener("click", gravarAudio);
         //document.getElementById("pararGravar").addEventListener("click", stopGravar);
     },
 
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
-    }
 };
 
 app.initialize();
