@@ -41,13 +41,12 @@
     </head>
     <body>
 
-            <div id="telaMenu" class="page page-active">
-                <!--<div class="navbar">
-                    <span> Menu </span>
-                </div>-->
+            <div id="telaMenu" class="page ">
 
                 <div class="painelMenu">
+
                     <div class="logoMenu">
+
                         <img src="img/logoPlay.png">
 
                     </div>
@@ -56,22 +55,65 @@
                         <i class="material-icons" style="font-size: 60px;"> play_arrow </i>
                         Reproduzir
                     </button>
+
                     <button class="btn targetPage" dt-page='#telaGravarAudio'>
                         <i class="material-icons" style="font-size: 60px;"> stop </i>
                         Gravar Áudio
                     </button>
+
+                </div>
+                
+            </div>
+
+
+
+            <div id="telaPlayMusica" class= "page page-active">
+                   
+               <div class="top">      
+                    <div class="painel">
+                        <div class="logoPlay">
+                            <img src="img/logoPlay.png">
+                        </div>
+                    </div>
+
+                    <button class="btn-direito btn-menu targetPage" dt-page='#telaMenu'>
+                        <i class="material-icons" style="font-size: 54px"> view_headline </i>
+                    </button>
+
+                    <button id = "volumeUp" class="btn-direito btn-mais">
+                        <i class="material-icons" style="font-size: 54px"> local_hospital</i>
+                    </button>
+
+                    <button id = "volumeDown" class="btn-direito">
+                        <i class="material-icons" style="font-size: 54px"> indeterminate_check_box</i>
+                    </button>
+                </div>
+
+                <div class="meio">
+                    <div class="container">
+                        <button id = "atrasarAudio" class="btn-direito btn-atras">
+                            <i class="material-icons" style="font-size: 54px">fast_rewind</i>
+                        </button>
+                    </div>
+
+                    <div class="container">
+                        <button id = "playAudio" class="btn-direito btn-play">
+                            <i class="material-icons" style="font-size: 54px">play_arrow</i>    
+                        </button>
+                    </div>
+
+                    <div class="container">
+                        <button id = "adiantarAudio" class="btn-direito btn-passar">
+                            <i class="material-icons" style="font-size: 54px">fast_forward</i>    
+                        </button>
+                    </div>                    
+
                 </div>
 
             </div>
 
 
-
-            <div id="telaPlayMusica" class= "hidden page">
-                <h2> Player de Musica <h2>
-            </div>
-
-
-            <div id="telaGravarAudio" class="hidden page">
+            <div id="telaGravarAudio" class=" page">
                 <h2> Gravar Audio </h2>
             </div>
 
