@@ -41,7 +41,7 @@
     </head>
     <body>
 
-            <div id="telaMenu" class="page ">
+            <div id="telaMenu" class="page">
 
                 <div class="painelMenu">
 
@@ -67,7 +67,7 @@
 
 
 
-            <div id="telaPlayMusica" class= "page page-active">
+            <div id="telaPlayMusica" class= "page">
                    
                <div class="top">      
                     <div class="painel">
@@ -90,20 +90,21 @@
                 </div>
 
                 <div class="meio">
-                    <div class="container">
-                        <button id = "atrasarAudio" class="btn-direito btn-atras">
+                    
+                    <div class="container container-primary">
+                        <button id = "atrasarAudio" class="btn-geral">
                             <i class="material-icons" style="font-size: 54px">fast_rewind</i>
                         </button>
                     </div>
 
                     <div class="container">
-                        <button id = "playAudio" class="btn-direito btn-play">
+                        <button id = "playAudio" class="btn-geral btn-play">
                             <i class="material-icons" style="font-size: 54px">play_arrow</i>    
                         </button>
                     </div>
 
                     <div class="container">
-                        <button id = "adiantarAudio" class="btn-direito btn-passar">
+                        <button id = "adiantarAudio" class="btn-geral btn-passar">
                             <i class="material-icons" style="font-size: 54px">fast_forward</i>    
                         </button>
                     </div>                    
@@ -113,8 +114,17 @@
             </div>
 
 
-            <div id="telaGravarAudio" class=" page">
-                <h2> Gravar Audio </h2>
+            <div id="telaGravarAudio" class=" page page-active">
+
+                <div class="btn-top-audio">
+                     <button class="btn-geral targetPage" dt-page='#telaMenu'>
+                        <i class="material-icons" style="font-size: 54px"> view_headline </i>
+                    </button>
+                </div>
+
+                <div class="logoAudio">
+                     <img src="img/logoRecord.png">
+                </div>
             </div>
 
             <!--<button id = "playAudio">PLAY</button>
