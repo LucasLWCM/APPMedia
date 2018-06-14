@@ -105,5 +105,8 @@ i{
 .logoAudio{
     width: 100%;
     text-align: center;
-    padding: 100px 0 0 0;
+    padding: 28% 0 22% 0;
+}
+.container-audio{
+    margin-left: 30%;
 }
