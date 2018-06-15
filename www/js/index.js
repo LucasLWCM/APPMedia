@@ -28,17 +28,19 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         document.getElementById("playAudio").addEventListener("click", playAudio);
-        //document.getElementById("pauseAudio").addEventListener("click", pauseAudio);
-        //document.getElementById("stopAudio").addEventListener("click", stopAudio);
+        document.getElementById("pauseAudio").addEventListener("click", pauseAudio);
+        document.getElementById("stopAudio").addEventListener("click", stopAudio);
         document.getElementById("volumeUp").addEventListener("click", volumeUp);
         document.getElementById("volumeDown").addEventListener("click", volumeDown);
-       // document.getElementById("posicaoAtual").addEventListener("click", posicaoAtual);
+       //document.getElementById("posicaoAtual").addEventListener("click", posicaoAtual);
         document.getElementById("adiantarAudio").addEventListener("click", adiantarAudio);
         document.getElementById("atrasarAudio").addEventListener("click", atrasarAudio);
         //document.getElementById("duracao").addEventListener("click", duracao);
         
-        //document.getElementById("gravarAudio").addEventListener("click", gravarAudio);
-        //document.getElementById("pararGravar").addEventListener("click", stopGravar);
+        document.getElementById("gravarAudio").addEventListener("click", gravarAudio);
+        document.getElementById("pararGravar").addEventListener("click", stopGravar);
+        document.getElementById("resumeGravar").addEventListener("click", resumeGravar);
+        document.getElementById("pausarGravar").addEventListener("click", pausarGravar);
     },
 
 };
@@ -107,6 +109,12 @@ function gravarAudio() {
     midiaRec.startRecord();
 }
 
+function pausarGravar(){
+  midiaRec.pauseRecord();
+}
+function resumeGravar(){
+  midiaRec.resumeRecord();
+}
 
 function posicaoAtual(){
   myMedia.getCurrentPosition(

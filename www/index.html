@@ -67,7 +67,7 @@
 
 
 
-            <div id="telaPlayMusica" class= "page">
+            <div id="telaPlayMusica" class= "page page-active">
                    
                <div class="top">      
                     <div class="painel">
@@ -97,9 +97,22 @@
                         </button>
                     </div>
 
-                    <div class="container">
-                        <button id = "playAudio" class="btn-geral btn-play">
+                    <div id = "playAudio" class="container container-play btn-active-play">
+                        <button id = "playAudio" class="btn-geral btn-play targetBtnPlay" dt-btn='#pauseAudio'>
                             <i class="material-icons" style="font-size: 54px">play_arrow</i>    
+                        </button>
+                    </div>
+
+                    <div id="pauseAudio" class="container container-play">
+                        <button id = "pauseAudio" class="btn-geral btn-play targetBtnPlay" dt-btn='#playAudio'>
+                            <i class="material-icons" style="font-size: 54px">pause</i>
+                        </button>
+
+                    </div>
+
+                    <div class="container">
+                        <button id = "pararAudio" class="btn-geral targetBtnPlay" dt-btn='#playAudio'>
+                            <i class="material-icons" style="font-size: 54px">stop</i>    
                         </button>
                     </div>
 
@@ -114,7 +127,7 @@
             </div>
 
 
-            <div id="telaGravarAudio" class=" page page-active">
+            <div id="telaGravarAudio" class=" page">
 
                 <div class="btn-top-audio">
                      <button class="btn-geral targetPage" dt-page='#telaMenu'>
@@ -127,14 +140,27 @@
                 </div>
 
                 <div class="meio">
-                    <div class="container container-audio">
-                        <button id = "gravarAudio" class="btn-geral">
+
+                    <div id="gravarAudio" class="container container-audio btn-active">
+                        <button id = "gravarAudio" class="btn-geral targetBtn" dt-btn='#pausarGravar'>
                             <i class="material-icons" style="font-size: 54px">mic</i>
                         </button>
                     </div>
 
+                    <div id = "pausarGravar" class="container container-audio">
+                        <button id = "pausarGravar" class="btn-geral targetBtn" dt-btn='#resumeGravar'>
+                            <i class="material-icons" style="font-size: 54px">pause</i>
+                        </button>
+                    </div>
+
+                    <div id = "resumeGravar" class="container container-audio">
+                        <button id = "resumeGravar" class="btn-geral targetBtn" dt-btn='#pausarGravar'>
+                            <i class="material-icons" style="font-size: 54px">play_arrow</i>
+                        </button>
+                    </div>
+
                     <div class="container">
-                        <button id = "pararGravar" class="btn-geral btn-play">
+                        <button id = "pararGravar" class="btn-geral targetBtn" dt-btn='#gravarAudio'>
                             <i class="material-icons" style="font-size: 54px">stop</i>    
                         </button>
                     </div>
@@ -144,17 +170,10 @@
 
             </div>
 
-            <!--<button id = "playAudio">PLAY</button>
-            <button id = "pauseAudio">PAUSE</button>
-            <button id = "stopAudio">STOP</button>
-            <button id = "volumeUp">VOLUME UP</button>
-            <button id = "volumeDown">VOLUME DOWN</button>
+            <!--
             <button id = "posicaoAtual">PEGAR POSIÇÃO</button>
-            <button id = "adiantarAudio">ADIANTAR -></button>
-            <button id = "atrasarAudio"> <- ATRASAR </button>
             <button id = "duracao">DURAÇÃO DO AUDIO</button>   
-            <button id = "gravarAudio">INICIAR</button>
-            <button id = "pararGravar">PARAR GRAVAÇÃO</button> -->
+             -->
 
         </div>
 

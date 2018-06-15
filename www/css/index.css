@@ -12,16 +12,6 @@
 .page-active{
     display: block;
 }
-#telaMenu{
-
-}
-#telaPlayMusica{
-
-}
-#telaGravarMusica{
-
-}
-
 .btnfooter{
     width: 80%;
     padding: 15px 0;
@@ -41,10 +31,10 @@
 .btn{
     width: 100%;
     padding: 15px 0;
-    text-align: center;
+    text-align: initial;
     background: white;
     border:0;
-    margin-bottom: 5px;
+    margin: 0 0 0 10%;
     font-size: 30px;
 
 }
@@ -54,7 +44,7 @@ i{
 .logoMenu{
     text-align: center;
     margin-bottom: 5px;
-    padding: 100px 0;
+    padding: 20% 0 20% 0;
 
 }
 .top{
@@ -90,12 +80,16 @@ i{
     width: 20%;
     text-align: center;
 }
+.container-play{
+    display: none;
+    overflow: auto;
+}
 .btn-geral{
     background: white;
     border: 0;
 }
 .container-primary{
-    margin-left: 20%;
+    margin-left: 10%;
 }
 .btn-top-audio{
     width: 100%;
@@ -109,4 +103,12 @@ i{
 }
 .container-audio{
     margin-left: 30%;
+    display: none;
+    overflow: auto;
+}
+.btn-active{
+    display: inline-block;
+}
+.btn-active-play{
+    display: inline-block;
 }
